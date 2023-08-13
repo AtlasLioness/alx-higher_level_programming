@@ -32,13 +32,28 @@ listint_t *reversed_list(listint_t **head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *current = *head;
+	listint_t *current = *head, *slow = *head, *fast = *head;
 	listint_t *reversed = NULL;
 
 	if (current == NULL || current->next == NULL)
 		return (1);
+	while (1)
+	{
+		fast = fast->next->next;
+		if (!fast)
+		{
+			reversed = slow->next;
+			break;
+		}
+		if (!fast->next)
+		{
+			reversed = slow->next->next;
+			break;
+		}
+		slow = slow->next;
+	}
 
-	reversed = reversed_list(&current);
+	reversed = reversed_list(&reversed);
 
 	while (reversed && current)
 	{
