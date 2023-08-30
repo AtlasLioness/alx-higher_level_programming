@@ -32,11 +32,10 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if not isinstance(value, type((0, 0))):
-            raise TypeError("position must be a tuple of 2 positive integers")
-            return
-        else:
+        if isinstance(value, type((0, 0))):
             self.__position = value
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     def my_print(self):
         space = ""
