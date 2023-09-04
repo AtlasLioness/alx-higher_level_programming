@@ -64,6 +64,5 @@ class Rectangle:
         """returns string rep of rectangle to recreate a new instance"""
         string = "Rectangle("
         string += str(self.width)
-        string += "," + str(self.height)
-        string += ")"
+        string += "," + str(self.height) + ")"
         return string
