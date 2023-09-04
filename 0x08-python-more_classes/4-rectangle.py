@@ -63,7 +63,7 @@ class Rectangle:
     def __repr__(self):
         """returns string rep of rectangle to recreate a new instance"""
         string = "Rectangle("
-        string += str(self.__width)
-        string += "," + str(self.__height)
+        string += str(self.width)
+        string += "," + str(self.height)
         string += ")"
         return string
