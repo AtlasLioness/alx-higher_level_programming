@@ -1,0 +1,42 @@
+# The ``5-text_indentation`` module
+===================================
+How to use 5-text_indentation.py
+===================================
+
+This module define one function
+``text_indentation(text)`` prints 2 new lines after . ? and :
+
+Usage
+=====
+
+Importing function from module:
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Testing regular argument:
+>>> text_indentation("ALX.")
+ALX.
+<BLANKLINE>
+
+Testing non-string text:
+>>> text_indentation(1)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+Testing blanks at beginning of printed line:
+>>> text_indentation("   ALX.")
+ALX.
+<BLANKLINE>
+
+Testing blanks at end of printed line:
+>>> text_indentation("ALX.      ")
+ALX.
+<BLANKLINE>
+
+Testing with blank line as text:
+>>> text_indentation('\n')
+<BLANKLINE>
+
+Testing missing one argument:
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
