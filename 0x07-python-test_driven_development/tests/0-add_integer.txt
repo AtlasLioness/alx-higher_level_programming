@@ -37,7 +37,7 @@ Testing a non-numeric as second argument:
 Traceback (most recent call last):
 TypeError: b must be an integer
 
-Testing no second argument:
+Testing missing one argument:
 >>> add_integer(1)
 99
 
@@ -45,3 +45,8 @@ Testing both arguments non numeric (only a typerror message should be raised):
 >>> add_integer("alx", "alx")
 Traceback (most recent call last):
 TypeError: a must be an integer
+
+Testing both arguments missing:
+>>> add_integer()
+Traceback (most recent call last):
+TypeError: add_integer() missing 1 required positional argument: 'a'
