@@ -1,0 +1,47 @@
+# The ``2-matrix_divided`` module
+==================================
+How to use 2-matrix_divided.py
+==================================
+
+This module defines one function
+``matrix_divided(matrix, div)`` divides all elements of a matrix
+
+Usage
+=====
+
+Importing function from module:
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Testing positive integer div:
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Testing negative integer div:
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, -3)
+[[-0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]]
+
+Testing string div:
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, "alx")
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Testing matrix not a list of lists of integers:
+>>> matrix = [['i', 0], ['11', "alx"]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Testing div equal to zero:
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+Testing not rectangular matrix:
+>>> matrix = [[1, 2], [4, 5, 6]]
+>>> matrix_divided(matrix, 3)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
