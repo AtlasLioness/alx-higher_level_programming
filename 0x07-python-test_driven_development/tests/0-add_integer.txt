@@ -1,0 +1,47 @@
+# The ``0-add_integer`` module
+===================================
+How 0-add_integer.py should be used
+===================================
+
+This module defines one function that adds integers ``add_integer()``
+
+Usage
+=====
+
+Importing function from module:
+	>>> add_integer = __import__("0-add_integer").add_integer
+
+Testing 2 positive integers:
+>>> add_integer(3, 2)
+5
+
+Testing two negative integers:
+>>> add_integer(-1, -4)
+-5
+
+Testing a float as an argument:
+>>> add_integer(3.1, 2)
+5
+
+Testing two floats:
+>>> add_integer(3.1, 2.1)
+5
+
+Testing a non-numeric as first argument:
+>>> add_integer("alx", 1)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+Testing a non-numeric as second argument:
+>>> add_integer(1, "alx")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+Testing no second argument:
+>>> add_integer(1)
+99
+
+Testing both arguments non numeric (only a typerror message should be raised):
+>>> add_integer("alx", "alx")
+Traceback (most recent call last):
+TypeError: a must be an integer
