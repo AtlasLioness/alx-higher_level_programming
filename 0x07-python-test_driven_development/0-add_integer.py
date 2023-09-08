@@ -2,7 +2,7 @@
 # 0-add_integer.py
 """
 The "0-add_integer" module
-with one function 
+with one function
 add_integer(): returns sum of two integers
 """
 
@@ -18,5 +18,5 @@ def add_integer(a, b=98):
     if isinstance(a, float):
         a = int(a)
     if isinstance(b, float):
-        b= int(b)
+        b = int(b)
     return a + b
