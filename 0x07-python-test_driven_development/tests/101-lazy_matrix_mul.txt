@@ -21,6 +21,11 @@ Testing regular arguments 2:
 >>> lazy_matrix_mul([[1, 1]], [[2, 2], [2, 2]])
 array([[4, 4]])
 
+Testing floats and negative numbers:
+>>> lazy_matrix_mul([[3.5, 1.5], [6.4, 9.11]], [[2.0, -2.1], [2.2, 2.1]])
+array([[10.3  , -4.2  ],
+       [32.842,  5.691]])
+
 Testing only one argument:
 >>> lazy_matrix_mul([[1, 1], [1, 1]])
 Traceback (most recent call last):
