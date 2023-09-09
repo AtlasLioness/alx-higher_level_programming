@@ -17,6 +17,10 @@ Testing regular arguments:
 array([[4, 4],
        [4, 4]])
 
+Testing regular arguments 2:
+>>> lazy_matrix_mul([[1, 1]], [[2, 2], [2, 2]])
+array([[4, 4]])
+
 Testing only one argument:
 >>> lazy_matrix_mul([[1, 1], [1, 1]])
 Traceback (most recent call last):
