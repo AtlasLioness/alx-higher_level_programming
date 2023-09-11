@@ -30,6 +30,12 @@ Testing negative value:
 Traceback (most recent call last):
 ValueError: hello must be greater than 0
 
+Testing value zero:
+>>> b = BaseGeometry()
+>>> b.integer_validator("hello", 0)
+Traceback (most recent call last):
+ValueError: hello must be greater than 0
+
 Testing only one argument:
 >>> b = BaseGeometry()
 >>> b.integer_validator("hello")
@@ -41,6 +47,22 @@ Testing no arguments:
 >>> b.integer_validator()
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Testing more than 2 arguments:
+>>> b = BaseGeometry()
+>>> b.integer_validator("hello", -5, 10)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Testing boolean values:
+>>> b = BaseGeometry()
+>>> b.integer_validator("hello", True)
+
+>>> b = BaseGeometry()
+>>> b.integer_validator("hello", False)
+Traceback (most recent call last):
+ValueError: hello must be greater than 0
+
 
 Testing argument in area method:
 >>> b = BaseGeometry()
