@@ -7,6 +7,7 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 class Rectangle(BaseGeometry):
     """Class rectangle definition"""
+
     def __init__(self, width, height):
         """initializing rectangle instance"""
         self.integer_validator("width", width)
@@ -21,3 +22,4 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """returns rectangle description"""
         string = "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
+        return string
