@@ -9,6 +9,10 @@ Usage
 Importing MyList class:
 >>> MyList = __import__('1-my_list').MyList
 
+Testing inheritence:
+>>> issubclass(MyList, list)
+True
+
 Testing empty List:
 >>> my_list = MyList()
 >>> my_list.print_sorted()
