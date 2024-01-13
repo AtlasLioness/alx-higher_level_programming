@@ -23,6 +23,7 @@ if __name__ == "__main__":
     numrows = cur.execute(q)
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        index, state = row
+        print("({}, {})").format(index, state)
     cur.close()
     db.close()
