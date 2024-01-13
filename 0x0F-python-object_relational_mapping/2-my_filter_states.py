@@ -24,6 +24,6 @@ if __name__ == "__main__":
     rows = cur.fetchall()
     for row in rows:
         index, state = row
-        print("({}, {})").format(index, state)
+        print("({}, '{}')").format(index, state)
     cur.close()
     db.close()
