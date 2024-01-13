@@ -5,7 +5,7 @@ in th states table of hbtn_0e_0_usa where name matches the argument.
 '''
 
 import MySQLdb
-import sys
+from sys import argv
 
 if __name__ == "__main__":
     db = MySQLdb.connect(
@@ -23,7 +23,6 @@ if __name__ == "__main__":
     numrows = cur.execute(q)
     rows = cur.fetchall()
     for row in rows:
-        index, state = row
-        print("({}, {})".format(index, state))
+        print(row)
     cur.close()
     db.close()
